@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Page setup -->
+    <meta charset="utf-8">
+    <title>Sierra Chart Studies by gcUserStudies</title>
+    <meta name="description" content="Free Sierra Chart Custom Studies">
+    <meta name="author" content="gcUserStudies">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/png" href="favicon.png">
+  
+    <!-- Stylesheets -->
+    <!-- Reset default styles and add support for google fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+   
+    <!-- Custom styles -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
+
+    <!-- Want to add Bootstrap? -->
+    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+    
+  </head>
+  
+  <body>
+
+      <header id="header">
+          <img src="logo.jpg"> <h3>Sierra Chart Studies</h3>
+
+          <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+          <ul class="main-menu">
+              <li><a href="#studies">studies</a></li>
+              <li><a href="#download">download</a></li>
+              <li><a href="#chartbooks">chartbooks</a></li>
+              <li><a href="#install">install</a></li>
+              <li><a href="#about">about</a></li>
+              <li><a href="#contact">contact</a></li>
+              <li><a href="#references">references</a></li>
+              <li><a href="#paid">paid</a></li>
+          </ul>
+      </header>
+
+      <div id="container">
+          <div class="inner">
+              <div id="content">
+
+                  <div id="studies" class="content-region hide">
+                      <hr />
+                      <h3 dir="auto">DOM: Auto Clear Recent Bid/Ask Volume</h3>
+                      <p dir="auto">This study automatically clears the 'Recent Bid/Ask Volume' for the symbol of the chart at specified session times. Option to also include 'Current Traded Bid/Ask Volume' when auto clearing. Up to six individual sessions can be configured.</p>
+
+                      <hr />
+                      <h3 dir="auto">Fair Value Gap Study (FVG)</h3>
+                      <p dir="auto">This study finds Fair Value Gaps for the given chart and draws based on configured parameters in the Study Settings.</p>
+                      <p dir="auto">Main features:</p>
+                      <ul dir="auto">
+                          <li>Independent settings for Up and Down Gaps</li>
+                          <li>Extend until Gap filled</li>
+                          <li>Minimum Gap size in ticks for FVG's</li>
+                          <li>Minimum Gap size in ticks for FVG Subgraphs</li>
+                          <li>Allow copying to other chart drawings</li>
+                          <li>Enable/Disable FVG Up and Down gaps</li>
+                          <li>Hide Gaps once filled</li>
+                          <li>Specify maximum lookback for bars to process</li>
+                          <li>Draw Midline</li>
+                          <li>Subgraphs for FVG Count</li>
+                          <li>Subgraphs for High and Low of FVG Up/Dn. Idea is to use these for trailing stops and/or targets with trade management study. The Subgraphs will shift based on open FVG's. Once FVG is closed the Subgraph will shift to the new one. Hard to explain so best thing is to set the drawstyle for all of the subgraphs to dash or line and see how it works. TEST ON SIM FIRST!!!</li>
+                          <li>Option to use additional study data to determine if that candle that creates the FVG (middle candle) should be used or not. Example: You could have a formula check if volume meets a certain threshold and output non-zero value for true. If the threshold is met then draw FVG. Otherwise, ignore this candle and don't draw the FVG.</li>
+                      </ul>
+
+                      <hr />
+                      <h3 dir="auto">Forex Factory</h3>
+                      <p dir="auto">This study downloads the weeks Forex Events from&nbsp;<a href="https://www.forexfactory.com/" rel="nofollow">Forex Factory</a>&nbsp;and displays them on your chart. IMPORTANT! "Use OpenGL for Chart Graphics" must be disabled for this study to work. <a href="https://www.sierrachart.com/SupportBoard.php?PostID=225735#P225735">According to Sierra Chart</a>, OpenGL is not supported for ACSIL and it is not currently planned. If you require OpenGL, a work around would be to run multiple instances of Sierra and disable OpenGL on just the instance for this study.</p>
+                      <p dir="auto">Main features:</p>
+                      <ul dir="auto">
+                          <li>Filter by all currencies (Countries)</li>
+                          <li>Filter by Expected Impact</li>
+                          <li>Alerts via Subgraphs to color candles 10m before event</li>
+                          <li>Alerts via Subgraphs to color candles at time of event (alert active for 1 minute)</li>
+                          <li>Hide previous events</li>
+                          <li>Show tomorrow's events</li>
+                          <li>Show tomorrow's events only after specified time</li>
+                          <li>Adjust color settings independently for past/upcoming/current events</li>
+                          <li>Uses FF default colors for Event Impact markers</li>
+                          <li>Adjust font size</li>
+                          <li>Adjust horizontal and vertical offset</li>
+                          <li>Adjust event spacing</li>
+                      </ul>
+
+                      <hr />
+                      <h3 dir="auto">RSI</h3>
+                      <p dir="auto">This study is a mod of stock RSI to include additional lines to reference. Example:</p>
+                      <ul dir="auto">
+                          <li>You might want a 70/30 set of lines</li>
+                          <li>And also an 80/20 set of lines</li>
+                      </ul>
+
+                      <hr />
+                      <h3 dir="auto">Trading System Based on Alert Condition - Limit Order</h3>
+                      <p dir="auto">This study is a modification of the included 'Trading System Based On Alert Condition Study' that ships with Sierra.</p>
+                      <p dir="auto">Main features:</p>
+                      <ul dir="auto">
+                          <li>Option to use limit orders instead of market orders</li>
+                          <li>Auto cancel orders if not filled within x amount of bars</li>
+                      </ul>
+
+                      <hr />
+                      <h3 dir="auto">No Mo Paper Hands</h3>
+                      <p dir="auto">This is a 'for fun' study that has issues of it's own. The idea is if you continually close trades too early then maybe you need a reminder not to... so you can load this study and it will continually lock trading when you have active positions. But the 'issues of it's own' is that you can always be extra super paper hand and just remove the study and then unlock trading again to bail :) One issue I ran into is with non Teton order routing. Basically client side vs server side. I believe I fixed the client side issues by just cancel/flatten all orders if you are stopped or profit target hit. Otherwise you have issues as discussed in <a href="https://www.sierrachart.com/SupportBoard.php?ThreadID=73330" rel="nofollow">this thread.</a></p>
+
+                      <hr />
+                      <h3 dir="auto">Rango Pinch</h3>
+                      <p dir="auto">This is a Pinch study based on MACD/ADX pinch-release. To visually see pinches and releases you can toss a MACD and ADX study on your chart and take a look. Try it on 512t chart and 1m chart. Some people will put it on multiple time frame/tick/volume charts and look at the confluence between the pinches forming and releasing. Written mainly as an exercise in learning Sierra studies, named after a Bearded Dragon.</p>
+
+                      <hr />
+                      <h3 dir="auto">Output Bar Formula Value To Subgraph</h3>
+                      <p dir="auto">This study will take the result of the given formula and place the output in a subgraph. This was written as a helper study to avoid using Spreadsheets to perform the same function. We couldn't find an alerternative method to accomplish the same thing so gave this a shot.</p>
+                  </div>
+
+                  <div id="download" class="content-region hide">
+                      <hr />
+                      <h3 dir="auto">Studies Collection Download</h3>
+                      <p dir="auto">All studies are contained in a single download file. You are free to download the source code and compile it yourself. However, please be aware that 'Remote Builds' will not work properly as some of the studies require external header files (included in my github repo). You will need to install a compiler locally. Sierra Chart <a href="https://www.sierrachart.com/index.php?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php">provides some information</a> that may help, otherwise Google is your friend. NOTE: Since you are downloading a DLL file you may get an alert of this being a malicious file. This is a good thing. You should be concerned when downloading files of this type. So please by ALL MEANS, go to <a href="https://www.virustotal.com/gui/home/url">Virus Total</a> and paste the download link to have it scanned to ensure it's safe. Or you can review the report I ran on it already below. It will show you the results along with the URL it scanned which should match the one listed here for Study Collection Download.</p>
+                      <ul dir="auto">
+                          <li>Current Study File Version: 2496</li>
+                          <li>Minimum Required Sierra Chart Version: 2414</li>
+                          <li><a href="https://github.com/gcUserStudies/sierrachart/raw/main/bin/2496/gcUserStudies_2496_64.dll">Download Study Collection</li>
+                          <li><a href="https://github.com/gcUserStudies/sierrachart">Source Code</a></li>
+                          <li><a href="https://www.virustotal.com/gui/file/1c109144153fc4da1faf8b2f2231a38fe4a2aff807794ce0de4f31f6bfbde36a?nocache=1">Virus Total Report for Study Download Link</a>
+                      </ul>
+                      <hr />
+                  </div>
+
+                  <div id="chartbooks" class="content-region hide">
+                      <p dir="auto"><a href="https://github.com/gcUserStudies/sierrachart/raw/main/chartbooks/ES%20DOM.cht">ES DOM Chartbook</a></p>
+                      <p><img src="https://github.com/gcUserStudies/sierrachart/raw/main/chartbooks/ES%20DOM.png" alt="ES DOM Chartbook" /></p>
+                  </div>
+
+                  <div id="about" class="content-region hide">
+                      <p>
+                          The gcUserStudies custom studies are provided free of charge and “as is” without warranty of any kind, either expressed or implied and are to be used at your own risk. They may contain errors and/or issues that I'm unaware of. While I do use some of these myself you should first thoroughly back test in simulation mode before introducing any new studies into your trading environment. The source code is provided so you may examine and determine for yourself if it meets your needs. By downloading and installing you accept all liability for any positive or negative results that occur while using any of these studies. Thank you and I hope you find them useful. The goal here is learning, sharing and always improving. I am by no means an expert in Sierra ACSIL Programming. I'm doing this for learning purposes and helping others. I may not have the most optimal design/code etc... I will continually improve these studies where I can.
+                      </p>
+                  </div>
+
+                  <div id="install" class="content-region hide">
+                      <h3 dir="auto">Study Collection DLL's</h3>
+                      <ul>
+                          <li>Download the DLL file(s) and copy to your SierraChart "Data" folder</li>
+                          <li>Example folder location if Sierra installed on C drive in default location: "C:\SierraChart\Data"</li>
+                          <li>Go to "Analysis-&gt;Studies" (or F6) and then "Add Custom Study" and select the study you wish to add</li>
+                          <li>Note! If you have a previous study version installed, you may need to remove it and re-add to ensure all new settings are refreshed</li>
+                      </ul>
+
+                      <h3 dir="auto">Chartbooks</h3>
+                      <ul>
+                          <li>Download the Chartbook file(s) and copy to your SierraChart "Data" folder</li>
+                          <li>Example folder location if Sierra installed on C drive in default location: "C:\SierraChart\Data"</li>
+                          <li>Then from SierraChart do "File-&gt;Open Chartbook" (or Ctrl-B) and select the Chartbook you wish to open</li>
+                      </ul>
+                  </div>
+
+                  <div id="contact" class="content-region hide">
+                      <p><a href="https://twitter.com/gcUserStudies" target="_blank">@gcUserStudies</a></p>
+                  </div>
+
+                  <div id="references" class="content-region hide">
+                      <h4 dir="auto"><em>Excellent ACSIL References</em></h4>
+                      <p dir="auto"><a href="https://github.com/korygill/technical-analysis">Kory Gill - 'New Study Template'</a></p>
+                      <p dir="auto"><a href="https://github.com/FrozenTundraTrader/sierrachart">Frozen Tundra - Sierra Github Repo</a></p>
+                      <p dir="auto"><a href="https://scottedwards.tech/post/building-sierra-chart-custom-studies" rel="nofollow">Scott Edwards - Building Sierra Chart Custom Studies</a></p>
+                  </div>
+
+                  <div id="paid" class="content-region hide">
+                      <p>I currently do not; nor plan to offer paid services/studies. I do not have the capacity or wishes to provide the level of support needed for such an endeavor (hats off and kudos to those who do). I&rsquo;ve spent the bulk of my career in IT and have served my time in the area of fixing all things broken and have no desire to do that any further. And finally, I&rsquo;ve found one of my biggest trading edges is the act of NOT trading when I shouldn't be. But my interest in the markets is still here day in and day out, thus focusing on helping people solve problems with studies and writing some for my own needs keeps me focused on something market related while I&rsquo;m waiting for the right trade setups.</p>
+                      <p>All that said... if you do happen to be in the market for paid services, here are some I'm aware of. NOTE! This is not an endorsement, shill, or what have you. I’m just saving you a Google search. Your welcome! I get nothing nor want anything for having these links here:</p>
+                      <ul>
+                          <li><a href="https://forum.obchodni-indikatory.cz/">Zyp's Studies</a></li>
+                          <li><a href="https://orderflowlabs.com/">OrderFlow Labs</a></li>
+                          <li><a href="https://sierra.trading/">Sierra Trading</a></li>
+                          <li><a href="https://www.simplesystemtrading.com/">Simple System Trading</a></li>
+                          <li><a href="https://www.ticinotrader.ch/tag/sierrachart">TicinoTrader</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <footer>
+      </footer>
+
+      <!-- Load additional JS scripts here -->
+      <script type="text/javascript" src="script.js"></script>
+
+  </body>
+</html>
