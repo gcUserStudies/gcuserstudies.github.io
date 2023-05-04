@@ -118,12 +118,31 @@
                       <hr />
                       <h3 dir="auto">Output Bar Formula Value To Subgraph</h3>
                       <p dir="auto">This study will take the result of the given formula and place the output in a subgraph. This was written as a helper study to avoid using Spreadsheets to perform the same function. We couldn't find an alerternative method to accomplish the same thing so gave this a shot.</p>
+
+                      <hr />
+                      <h3 dir="auto">Account Balance Text - External Service</h3>
+                      <p dir="auto">This is a modification of the existing study shipped with Sierra. If using 'prop-ish' firm they may not update cash balance until next day. You may also want to specify an account other than the one the chart is set to use. Use Case may be if you have multiple accounts from a 'prop' place and would like to list the available funds on each. Add a study for each account and specify the account name. Why? You may just want to show this info on a chart vs the account window.</p>
+                      <p dir="auto">Main features:</p>
+                      <ul dir="auto">
+                          <li>Option to show Cash Balance vs Available Funds Balance</li>
+                          <li>Option to prefix balance with Account Name</li>
+                          <li>Option to manually specify account to use</li>
+                      </ul>
+                      <hr />
                   </div>
 
                   <div id="download" class="content-region hide">
                       <hr />
                       <h3 dir="auto">Studies Collection Download</h3>
                       <p dir="auto">All studies are contained in a single download file. You are free to download the source code and compile it yourself. However, please be aware that 'Remote Builds' will not work properly as some of the studies require external header files (included in my github repo). You will need to install a compiler locally. Sierra Chart <a href="https://www.sierrachart.com/index.php?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php">provides some information</a> that may help, otherwise Google is your friend. NOTE: Since you are downloading a DLL file you may get an alert of this being a malicious file. This is a good thing. You should be concerned when downloading files of this type. So please by ALL MEANS, go to <a href="https://www.virustotal.com/gui/home/url">Virus Total</a> and paste the download link to have it scanned to ensure it's safe. Or you can review the report I ran on it already below. It will show you the results along with the URL it scanned which should match the one listed here for Study Collection Download.</p>
+                      <ul dir="auto">
+                          <li>Current Study File Version: 2497 (NOTE: Virus Total is flagging one item for this. I'm assuming false positive)</li>
+                          <li>Minimum Required Sierra Chart Version: 2414</li>
+                          <li><a href="https://github.com/gcUserStudies/sierrachart/raw/main/bin/2497/gcUserStudies_2497_64.dll">Download Study Collection</li>
+                          <li><a href="https://github.com/gcUserStudies/sierrachart">Source Code</a></li>
+                          <li><a href="https://www.virustotal.com/gui/file/04fe92ff3817e5af9f14e4f74158294fd78919d21580a1eddb007acc22fc0794?nocache=1">Virus Total Report for Study Download Link</a>
+                      </ul>
+                      <hr />
                       <ul dir="auto">
                           <li>Current Study File Version: 2496</li>
                           <li>Minimum Required Sierra Chart Version: 2414</li>
